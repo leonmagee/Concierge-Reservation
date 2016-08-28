@@ -3,9 +3,9 @@ var Gist = React.createClass({
     render: function() {
 
         return (
-            <h1>This is {this.props.name}'s Gist</h1>
+            <h1>{this.props.username}'s' last Gist is <a href={this.props.url} target="_blank">here</a></h1>
         );
     }
 });
 
-React.render(<Gist name="Leon"/>, document.getElementById('app'));
+// React.render(<Gist username="Leon" url="http://google.com"/>, document.getElementById('app'));
