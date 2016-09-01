@@ -111,7 +111,6 @@ var GistBox = React.createClass({
 
         return {
             gists: []
-            //gists: [{username: 'leonmagee', url: 'http://google.com'}]
         };
     },
 
@@ -126,6 +125,7 @@ var GistBox = React.createClass({
             var gists = this.state.gists.concat({ username: username, url: url });
             this.setState({ gists: gists });
             console.log(this);
+            console.log('gulp watch working...');
         }.bind(this));
     },
 
