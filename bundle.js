@@ -1,6 +1,25 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Wrapper = require('./components/Wrapper');
+
+var _Wrapper2 = _interopRequireDefault(_Wrapper);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(_Wrapper2.default, null), document.getElementById('app'));
+
+},{"./components/Wrapper":4,"react":175,"react-dom":32}],2:[function(require,module,exports){
+'use strict';
+
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -40,7 +59,7 @@ var ImageElement = function (_React$Component) {
 
 exports.default = ImageElement;
 
-},{"react":175}],2:[function(require,module,exports){
+},{"react":175}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -85,7 +104,7 @@ var InputElement = function (_React$Component) {
 
 exports.default = InputElement;
 
-},{"react":175}],3:[function(require,module,exports){
+},{"react":175}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -137,7 +156,10 @@ var Wrapper = function (_React$Component) {
                 _react2.default.createElement(_InputElement2.default, { type: 'text', ph: 'Input 1' }),
                 _react2.default.createElement('br', null),
                 _react2.default.createElement('br', null),
-                _react2.default.createElement(_InputElement2.default, { type: 'text', ph: 'Input 2' })
+                _react2.default.createElement(_InputElement2.default, { type: 'text', ph: 'Input 7' }),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(_InputElement2.default, { type: 'text', ph: 'Input 5' })
             );
         }
     }]);
@@ -147,29 +169,7 @@ var Wrapper = function (_React$Component) {
 
 exports.default = Wrapper;
 
-},{"./ImageElement":1,"./InputElement":2,"react":175}],4:[function(require,module,exports){
-'use strict';
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Wrapper = require('./js/components/Wrapper');
-
-var _Wrapper2 = _interopRequireDefault(_Wrapper);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_reactDom2.default.render(_react2.default.createElement(_Wrapper2.default, null), document.getElementById('app'));
-// import Wrapper from './App'
-// ReactDOM.render(<Wrapper />, document.getElementById('app'))
-// if there is only one class in a file, you can change the name here and it will still work...
-
-},{"./js/components/Wrapper":3,"react":175,"react-dom":32}],5:[function(require,module,exports){
+},{"./ImageElement":2,"./InputElement":3,"react":175}],5:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -20930,4 +20930,4 @@ module.exports = validateDOMNesting;
 
 module.exports = require('./lib/React');
 
-},{"./lib/React":58}]},{},[4]);
+},{"./lib/React":58}]},{},[1]);
