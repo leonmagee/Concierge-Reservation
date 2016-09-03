@@ -21456,6 +21456,10 @@
 	
 	var _ImageElement2 = _interopRequireDefault(_ImageElement);
 	
+	var _InputElement = __webpack_require__(174);
+	
+	var _InputElement2 = _interopRequireDefault(_InputElement);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21482,7 +21486,12 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(_ImageElement2.default, { path: './assets/img/logo.png' })
+	                _react2.default.createElement(_ImageElement2.default, { path: './assets/img/logo.png' }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(_InputElement2.default, { type: 'text', ph: 'Input 1' }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(_InputElement2.default, { type: 'text', ph: 'Input 2' })
 	            );
 	        }
 	    }]);
@@ -21536,6 +21545,54 @@
 	}(_react2.default.Component);
 	
 	exports.default = ImageElement;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var InputElement = function (_React$Component) {
+	    _inherits(InputElement, _React$Component);
+	
+	    function InputElement() {
+	        _classCallCheck(this, InputElement);
+	
+	        return _possibleConstructorReturn(this, (InputElement.__proto__ || Object.getPrototypeOf(InputElement)).apply(this, arguments));
+	    }
+	
+	    _createClass(InputElement, [{
+	        key: 'render',
+	        value: function render() {
+	            return (
+	                // <img src={this.props.path} />
+	                _react2.default.createElement('input', { type: this.props.type, placeholder: this.props.ph })
+	            );
+	        }
+	    }]);
+	
+	    return InputElement;
+	}(_react2.default.Component);
+	
+	exports.default = InputElement;
 
 /***/ }
 /******/ ]);
