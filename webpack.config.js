@@ -1,12 +1,15 @@
 module.exports = {
     entry: './main.js',
     output: {
-        path: './',
+        //path: './',
+        path: __dirname + '/',
+        //publicPath: __dirname + '/',
+        //filename: __dirname + '/index.js'
         filename: 'index.js'
     },
     devServer: {
         inline: true,
-        port: 7000
+        port: 8080
     },
     module: {
         loaders: [

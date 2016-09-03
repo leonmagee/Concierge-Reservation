@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
+import ImageElement from './ImageElement'
 
 class Wrapper extends React.Component {
 
@@ -7,7 +8,7 @@ class Wrapper extends React.Component {
 
         return (
             <div>
-                Wrapper
+                <ImageElement path="./assets/img/logo.png" />
             </div>
         )
     }

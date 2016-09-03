@@ -1,12 +1,9 @@
+import React from 'react';
 class ImageElement extends React.Component {
-
     render() {
-
         return (
-            <div>Here is an image</div>
+            <img src={this.props.path}/>
         )
     }
-
 }
-
 export default ImageElement;

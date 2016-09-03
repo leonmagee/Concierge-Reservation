@@ -3,7 +3,8 @@ class InputElement extends React.Component {
     render() {
 
         return (
-            <div>Here is an input</div>
+            // <img src={this.props.path} />
+            <div>{this.props.path}</div>
         )
     }
 
