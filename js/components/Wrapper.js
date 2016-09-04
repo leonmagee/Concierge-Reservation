@@ -17,7 +17,7 @@ class Wrapper extends React.Component {
                 <InputElement type="text" ph="Input 7" />
                 <br />
                 <br />
-                <InputElement type="text" ph="Input 5" />
+                <InputElement type="text" ph="Input 10" />
             </div>
         )
     }

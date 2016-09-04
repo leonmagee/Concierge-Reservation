@@ -1,0 +1,26 @@
+.restaurant-tabs-wrapper {
+
+  .row {
+
+    .columns {
+
+      text-align: center;
+      padding: 10px;
+      background-color: #DDD;
+
+      &.pending {
+        backgound-color: red;
+      }
+
+      &.redeemed {
+
+
+      }
+
+      &.all {
+
+
+      }
+    }
+  }
+}

@@ -11,6 +11,8 @@ var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var util = require('gulp-util');
 //var browserSync = require('browser-sync').create();
+// var plumber = require('gulp-plumber');
+// gulp plumber? this will allow gulp to still run after error?
 
 /**
  * Default Tasks
@@ -22,33 +24,32 @@ gulp.task('default', ['watch']);
 /**
  * Browserify (compile js to 'bundle.js')
  */
-gulp.task('browserify', function () {
+gulp.task('browserify', () => {
 
-    return browserify('./js/app.js')
-    //.transform(babelify)  // {state: 0 } parameter removed... not sure if this does anything now...
-        .transform(babelify, {presets: ["es2015", "react"]})
-        .bundle()
-        .pipe(source('bundle.js'))
-        .pipe(gulp.dest('./'));
+    return browserify('./js/app.js')                            // bundles all modules together
+        .transform(babelify, {presets: ["es2015", "react"]})    // transforms jsx to js (es6)
+        .bundle()                                               // browserify method?
+        .pipe(source('./bundle.js'))                            // source - make it readable by gulp?
+        .pipe(gulp.dest('./'));                                 // set destination
 });
 
 /**
  * SCSS
  */
-gulp.task('scss', function() {
-    gulp.src(['assets/scss/app.scss'])
+gulp.task('scss', () => {
+    gulp.src(['./assets/scss/app.scss'])
         .pipe(sass({style: 'compressed', errLogToConsole: true}))
-        .pipe(rename('app.min.css'))
+        .pipe(rename('./app.min.css'))
         .pipe(minifycss())
-        .pipe(gulp.dest('assets/css'));
+        .pipe(gulp.dest('./assets/css'));
     util.log(util.colors.green('SCSS Compiled!'));
 });
 
 /**
  * Watch Tasks
  */
-gulp.task('watch', function () {
+gulp.task('watch', () => {
 
-    gulp.watch('js/**/*.js', ['browserify']);
-    gulp.watch('assets/scss/**/*.scss', ['scss']);
+    gulp.watch('./js/**/*.js', ['browserify']);
+    gulp.watch('./assets/scss/**/*.scss', ['scss']);
 });

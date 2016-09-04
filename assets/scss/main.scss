@@ -1,0 +1,19 @@
+body {
+
+  margin: 0;
+
+  &.homepage {
+
+    background-color: #333;
+    background-image: url('../img/homepage-bg-large.jpg');
+  }
+
+  .reservation-wrapper {
+
+    padding: 10px 15px;
+    border-left: 5px solid $color-primary;
+    border-bottom: 1px solid #EEE;
+    background-color: #FAFAFA;
+  }
+}
+
