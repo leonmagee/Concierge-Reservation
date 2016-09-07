@@ -1,0 +1,55 @@
+.reservation-wrapper {
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #EEE;
+  background-color: #FAFAFA;
+
+  .date {
+
+    color: #777;
+  }
+
+  .circle-wrap {
+
+    padding-left: 25px;
+    padding-top: 15px;
+
+    .circle {
+
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+  }
+
+  &.pending {
+    .circle-wrap {
+      .circle {
+
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &.redeemed {
+    .circle-wrap {
+      .circle {
+
+        background-color: $color-second;
+      }
+    }
+  }
+
+  .button-wrap {
+
+    margin-top: 11px;
+
+    a.cr-redeem {
+      background-color: #F7F7F7;
+      border: 1px solid #DDD;
+      padding: 7px 12px;
+      color: #333;
+    }
+  }
+}
