@@ -1,13 +1,73 @@
-body {
+html {
 
-  margin: 0;
+  height: 100%;
+  background-color: blue;
 
-  &.homepage {
+  body {
 
-    background-color: #333;
-    background-image: url('../img/homepage-bg-large.jpg');
+    margin: 0;
+    height: 100%;
+
+    div#app {
+
+      height: 100%;
+
+      .homepage-wrapper {
+
+        height: 100%;
+        background-color: #333;
+        background-image: url('../img/homepage-bg-mobile.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+
+        @media(min-width: $screen-sm) {
+
+          background-image: url('../img/homepage-bg-large.jpg');
+        }
+
+        .homepage-wrapper-inner {
+
+          background-color: rgba(0,0,0,0.1);
+          height: 100%;
+
+          .home-logo-wrap {
+
+            //padding: 15px;
+            margin-top: 6em;
+            text-align: center;
+
+            img {
+
+              //width: 1000px;
+            }
+          }
+        }
+
+        .login-wrap {
+
+          text-align: center;
+          margin-top: 2em;
+
+          a.login-button {
+
+            background-color: #F7F7F7;
+            border: 1px solid #000;
+            padding: 7px 12px;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 1px 1px #FFF;
+
+            &:hover {
+
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
   }
-
-
 }
-
